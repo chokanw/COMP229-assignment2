@@ -14,6 +14,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
+app.get('/', (req, res) => {
+    res.json({ message: "Welcome to DressStore application" });
+  });
 app.use('/api/products', productRoutes);
 
 const PORT = process.env.PORT || 8080;
